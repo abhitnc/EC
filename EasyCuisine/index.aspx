@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Argon Design System - Free Design System for Bootstrap 4</title>
+    <title>Easy Cuisine - A Recipe Generator</title>
     <!-- Favicon -->
     <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -398,23 +398,23 @@
                                 <span>Disabled checkbox</span>
                             </label>
                         </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
-                    <!-- Toggle buttons -->
-                    <div class="mb-3">
-                        <small class="text-uppercase font-weight-bold">Toggle buttons</small>
                     </div>
-                    <label class="custom-toggle">
-                        <input type="checkbox">
-                        <span class="custom-toggle-slider rounded-circle"></span>
-                    </label>
-                    <span class="clearfix"></span>
-                    <label class="custom-toggle">
-                        <input type="checkbox" checked>
-                        <span class="custom-toggle-slider rounded-circle"></span>
-                    </label>
-                </div>
-                <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
+                    <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
+                        <!-- Toggle buttons -->
+                        <div class="mb-3">
+                            <small class="text-uppercase font-weight-bold">Toggle buttons</small>
+                        </div>
+                        <label class="custom-toggle">
+                            <input type="checkbox">
+                            <span class="custom-toggle-slider rounded-circle"></span>
+                        </label>
+                        <span class="clearfix"></span>
+                        <label class="custom-toggle">
+                            <input type="checkbox" checked>
+                            <span class="custom-toggle-slider rounded-circle"></span>
+                        </label>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mt-4 mt-md-0">
                         <div class="mb-3">
                             <small class="text-uppercase font-weight-bold">Sliders</small>
                         </div>
@@ -1040,6 +1040,7 @@
                         <!--Labels-->
                         <div class="col-lg-5">
                             <h3 class="h4 text-success font-weight-bold mb-5">Labels</h3>
+                        </div>
                 </h3>
                 <span class="badge badge-pill badge-primary text-uppercase">Primary</span>
                 <span class="badge badge-pill badge-success text-uppercase">Success</span>
@@ -1047,8 +1048,6 @@
                 <span class="badge badge-pill badge-warning text-uppercase">Warning</span>
                 <span class="badge badge-pill badge-info text-uppercase">Info</span>
             </div>
-            </div>
-       
             <h3 class="mt-lg mb-4">
                 <span>Alerts</span>
             </h3>

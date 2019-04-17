@@ -39,28 +39,11 @@
                     <div class="col-lg-5">
                         <div class="card bg-secondary shadow border-0">
                             <div class="card-header bg-white pb-5">
-                                <div class="text-muted text-center mb-3">
-                                    <small>Sign up with</small>
-                                </div>
                                 <div class="text-center">
-                                    <a href="#" class="btn btn-neutral btn-icon mr-4">
-                                        <span class="btn-inner--icon">
-                                            <img src="../assets/img/icons/common/github.svg">
-                                        </span>
-                                        <span class="btn-inner--text">Github</span>
-                                    </a>
-                                    <a href="#" class="btn btn-neutral btn-icon">
-                                        <span class="btn-inner--icon">
-                                            <img src="../assets/img/icons/common/google.svg">
-                                        </span>
-                                        <span class="btn-inner--text">Google</span>
-                                    </a>
+                                    <h1 class="display-1 mb-0">REGISTER</h1>
                                 </div>
                             </div>
                             <div class="card-body px-lg-5 py-lg-5">
-                                <div class="text-center text-muted mb-4">
-                                    <small>Or sign up with credentials</small>
-                                </div>
                                 <form runat="server">
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
@@ -69,7 +52,7 @@
                                             </div>
                                             <asp:TextBox ID="name" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox>
                                         </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
@@ -78,7 +61,7 @@
                                             </div>
                                             <asp:TextBox ID="number" runat="server" TextMode="Phone" placeholder="Phone Number" CssClass="form-control"></asp:TextBox>
                                         </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
@@ -87,7 +70,7 @@
                                             </div>
                                             <asp:TextBox ID="email" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control"></asp:TextBox>
                                         </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative">
@@ -96,29 +79,29 @@
                                             </div>
                                             <asp:TextBox ID="pass" runat="server" TextMode="Password" placeholder="Password" CssClass="form-control"></asp:TextBox>
                                         </div>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
                                     </div>
-                                    <div class="text-muted font-italic">
-                                        <small>password strength:
-                                            <span class="text-success font-weight-700">strong</span>
-                                        </small>
-                                    </div>
-                                    <div class="row my-4">
-                                        <div class="col-12">
-                                            <div class="custom-control custom-control-alternative custom-checkbox">
-                                                <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                                                <label class="custom-control-label" for="customCheckRegister">
-                                                    <span>I agree with the
-                                                        <a href="#">Privacy Policy</a>
-                                                    </span>
-                                                </label>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                             </div>
+                                            <asp:TextBox ID="confirm" runat="server" TextMode="Password" placeholder="Confirm Password" CssClass="form-control"></asp:TextBox>
                                         </div>
+                                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="pass" ControlToValidate="confirm" ErrorMessage="Password Not Matching"></asp:CompareValidator>
                                     </div>
                                     <div class="text-center">
-                                        <asp:Button ID="reg" runat="server" Text="Create Account" CssClass="btn btn-primary mt-4" OnClick="reg_Click1"/>
+                                        <asp:Button ID="reg" runat="server" Text="Create" CssClass="btn btn-primary mt-4" OnClick="reg_Click1" />
+                                        <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" OnClick="reg_Click1" />
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-6 text-center">
+                                <a href="#" class="text-light">
+                                    <small>Already have an Account?</small>
+                                </a>
                             </div>
                         </div>
                     </div>

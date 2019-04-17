@@ -16,4 +16,15 @@ public partial class test : System.Web.UI.Page
     {
         Response.Redirect("index.aspx");
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (c1.Visible)
+        {
+            c1.Visible = false;
+        }
+        else
+        {
+            c1.Visible = true;
+        }
+    }
 }
