@@ -26,8 +26,12 @@
         <asp:Button ID="button1" runat="server" Text="Categories" OnClick="Button1_Click" />
     </div>
     <div id="contentDiv">
-        <asp:CheckBox ID="c1" runat="server" Text="check 1" Visible="false"/>
+        <asp:CheckBoxList ID="c1" runat="server" DataSourceID="SqlDataSource1" DataTextField="I_Name" DataValueField="I_Name">
+        </asp:CheckBoxList>
     </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients]"></asp:SqlDataSource>
+<asp:Button ID="b1" runat="server" Text="submit" OnClick="b1_Click" />
+<asp:Label ID="l1" runat="server" />
 </form>
 </body>
 </html>

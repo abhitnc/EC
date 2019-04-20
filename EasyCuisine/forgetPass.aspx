@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Start your development with a Design System for Bootstrap 4." />
     <meta name="author" content="Creative Tim" />
     <title>Argon Design System - Free Design System for Bootstrap 4</title>
     <!-- Favicon -->
@@ -54,8 +54,9 @@
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="text-center">
-                                    <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn btn-primary mt-4" OnClick="submit_Click" />
+                                    <asp:Button ID="submit" runat="server" Text="Submit" CssClass="btn btn-primary mt-4" OnClick="SendEmail" />
                                     <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" OnClick="submit_Click" />
+                                    <asp:Label ID="lblMessage" runat="server" />
                                 </div>
                             </form>
                         </div>
@@ -86,7 +87,6 @@
                     </a>
                 </div>
             </div>
-            <hr>
             <div class="row align-items-center justify-content-md-between">
                 <div class="col-md-6">
                     <div class="copyright">

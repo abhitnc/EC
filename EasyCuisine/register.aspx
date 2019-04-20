@@ -52,8 +52,8 @@
                                             </div>
                                             <asp:TextBox ID="name" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
-                                    </div>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
+                                        </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
                                             <div class="input-group-prepend">
@@ -61,7 +61,7 @@
                                             </div>
                                             <asp:TextBox ID="number" runat="server" TextMode="Phone" placeholder="Phone Number" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
@@ -70,7 +70,8 @@
                                             </div>
                                             <asp:TextBox ID="email" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="Dynamic" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Wrong email address" ControlToValidate="email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative">
@@ -79,7 +80,8 @@
                                             </div>
                                             <asp:TextBox ID="pass" runat="server" TextMode="Password" placeholder="Password" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Display="Dynamic" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator Display="Dynamic"  runat="server" ID="RegularExpressionValidator2" ValidationExpression="^(?=.*\d+)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%]{6,10}$" ErrorMessage="Bad password" ControlToValidate="pass"></asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative">
@@ -88,7 +90,7 @@
                                             </div>
                                             <asp:TextBox ID="confirm" runat="server" TextMode="Password" placeholder="Confirm Password" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="pass" ControlToValidate="confirm" ErrorMessage="Password Not Matching"></asp:CompareValidator>
+                                        <asp:CompareValidator ID="CompareValidator1" runat="server" Display="Dynamic" ControlToCompare="pass" ControlToValidate="confirm" ErrorMessage="Password Not Matching"></asp:CompareValidator>
                                     </div>
                                     <div class="text-center">
                                         <asp:Button ID="reg" runat="server" Text="Create" CssClass="btn btn-primary mt-4" OnClick="reg_Click1" />
@@ -168,3 +170,5 @@
 </body>
 
 </html>
+
+<!-- 	CONSTRAINT [email] UNIQUE NONCLUSTERED ([User_Email] ASC) -->

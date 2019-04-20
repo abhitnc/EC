@@ -224,6 +224,7 @@
                         <button class="btn btn-1 btn-warning" type="button">Warning</button>
                         <button class="btn btn-1 btn-danger" type="button">Danger</button>
                         <button class="btn btn-1 btn-neutral" type="button">Neutral</button>
+                        <!-- Button Outline -->
                         <div class="mb-3 mt-5">
                             <small class="text-uppercase font-weight-bold">Outline</small>
                         </div>

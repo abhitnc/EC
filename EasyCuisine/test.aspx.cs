@@ -16,6 +16,7 @@ public partial class test : System.Web.UI.Page
     {
         Response.Redirect("index.aspx");
     }
+
     protected void Button1_Click(object sender, EventArgs e)
     {
         if (c1.Visible)
@@ -25,6 +26,16 @@ public partial class test : System.Web.UI.Page
         else
         {
             c1.Visible = true;
+        }
+    }
+    protected void b1_Click(object sender, EventArgs e)
+    {
+        string i = "";
+        for (int j = 0; j < c1.Items.Count; j++) { 
+            if (c1.Items[j].Selected) {
+                i = i + "" + c1.Items[j].Text;
+            }
+        l1.Text = i;
         }
     }
 }
