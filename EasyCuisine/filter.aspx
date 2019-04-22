@@ -75,54 +75,54 @@
                     <div class="container shape-container d-flex align-items-center py-lg">
                         <div class="col px-0">
                             <div id="headDiv1">
-                                <asp:Button ID="button1" runat="server" CssClass="btn btn-1 btn-outline-primary" Text="DAIRY" OnClick="Button1_Click" />
+                                <asp:Button ID="button1" runat="server" Width="200px" CssClass="btn btn-1 btn-outline-primary" Text="DAIRY" OnClick="Button1_Click" />
                             </div>
                             <div id="contentDiv1">
-                                <asp:CheckBoxList ID="c1" runat="server" Visible="false" DataSourceID="SqlDataSource1" DataTextField="I_Name" DataValueField="I_Name"></asp:CheckBoxList>
+                                <asp:CheckBoxList ID="c1" runat="server" Visible="false" DataSourceID="SqlDataSource1" DataTextField="I_Name" DataValueField="I_Id"></asp:CheckBoxList>
                             </div>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'D%';"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Id],[I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'D%';"></asp:SqlDataSource>
                             <div id="headDiv2">
-                                <asp:Button ID="button2" runat="server" CssClass="btn btn-1 btn-outline-primary" Text="FRUITS" OnClick="Button2_Click" />
+                                <asp:Button ID="button2" runat="server" Width="200px"  CssClass="btn btn-1 btn-outline-primary" Text="FRUITS" OnClick="Button2_Click" />
                             </div>
                             <div id="contentDiv2">
-                                <asp:CheckBoxList ID="c2" runat="server" Visible="false" DataSourceID="SqlDataSource2" DataTextField="I_Name" DataValueField="I_Name"></asp:CheckBoxList>
+                                <asp:CheckBoxList ID="c2" runat="server" Visible="false" DataSourceID="SqlDataSource2" DataTextField="I_Name" DataValueField="I_Id"></asp:CheckBoxList>
                             </div>
-                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'F%';"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Id],[I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'F%';"></asp:SqlDataSource>
                             <div id="headDiv3">
-                                <asp:Button ID="button3" runat="server" CssClass="btn btn-1 btn-outline-primary" Text="GRAINS" OnClick="Button3_Click" />
+                                <asp:Button ID="button3" runat="server" Width="200px"  CssClass="btn btn-1 btn-outline-primary" Text="GRAINS" OnClick="Button3_Click" />
                             </div>
                             <div id="contentDiv3">
-                                <asp:CheckBoxList ID="c3" runat="server" Visible="false" DataSourceID="SqlDataSource3" DataTextField="I_Name" DataValueField="I_Name"></asp:CheckBoxList>
+                                <asp:CheckBoxList ID="c3" runat="server" Visible="false" DataSourceID="SqlDataSource3" DataTextField="I_Name" DataValueField="I_Id"></asp:CheckBoxList>
                             </div>
-                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'G%';"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Id],[I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'G%';"></asp:SqlDataSource>
                             <div id="headDiv4">
-                                <asp:Button ID="button4" runat="server" CssClass="btn btn-1 btn-outline-primary" Text="SPICES" OnClick="Button4_Click" />
+                                <asp:Button ID="button4" runat="server" Width="200px"  CssClass="btn btn-1 btn-outline-primary" Text="SPICES" OnClick="Button4_Click" />
                             </div>
                             <div id="contentDiv4">
-                                <asp:CheckBoxList ID="c4" runat="server" Visible="false" DataSourceID="SqlDataSource4" DataTextField="I_Name" DataValueField="I_Name"></asp:CheckBoxList>
+                                <asp:CheckBoxList ID="c4" runat="server" Visible="false" DataSourceID="SqlDataSource4" DataTextField="I_Name" DataValueField="I_Id"></asp:CheckBoxList>
                             </div>
-                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'S%';"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Id],[I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'S%';"></asp:SqlDataSource>
                             <div id="headDiv5">
-                                <asp:Button ID="button5" runat="server" CssClass="btn btn-1 btn-outline-primary" Text="VEGETABLES" OnClick="Button5_Click" />
+                                <asp:Button ID="button5" runat="server" Width="200px"  CssClass="btn btn-1 btn-outline-primary" Text="VEGETABLES" OnClick="Button5_Click" />
                             </div>
                             <div id="contentDiv5">
-                                <asp:CheckBoxList ID="c5" Visible="false" runat="server" DataSourceID="SqlDataSource5" DataTextField="I_Name" DataValueField="I_Name"></asp:CheckBoxList>
+                                <asp:CheckBoxList ID="c5" Visible="false" runat="server" DataSourceID="SqlDataSource5" DataTextField="I_Name" DataValueField="I_Id"></asp:CheckBoxList>
                             </div>
-                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'V%';"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Id],[I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'V%';"></asp:SqlDataSource>
                             <div id="headDiv6">
-                                <asp:Button ID="button6" runat="server" CssClass="btn btn-1 btn-outline-primary" Text="LEGUMES" OnClick="Button6_Click" />
+                                <asp:Button ID="button6" runat="server" Width="200px"  CssClass="btn btn-1 btn-outline-primary" Text="LEGUMES" OnClick="Button6_Click" />
                             </div>
                             <div id="contentDiv6">
-                                <asp:CheckBoxList ID="c6" runat="server" Visible="false" DataSourceID="SqlDataSource6" DataTextField="I_Name" DataValueField="I_Name"></asp:CheckBoxList>
+                                <asp:CheckBoxList ID="c6" runat="server" Visible="false" DataSourceID="SqlDataSource6" DataTextField="I_Name" DataValueField="I_Id"></asp:CheckBoxList>
                             </div>
-                            <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'L%';"></asp:SqlDataSource>                            
+                            <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Id],[I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'L%';"></asp:SqlDataSource>                            
                             <div id="headDiv7">
-                                <asp:Button ID="button7" runat="server" CssClass="btn btn-1 btn-outline-primary" Text="MIS" OnClick="Button7_Click" />
+                                <asp:Button ID="button7" runat="server" Width="200px"  CssClass="btn btn-1 btn-outline-primary" Text="MIS" OnClick="Button7_Click" />
                             </div>
                             <div id="contentDiv7">
-                                <asp:CheckBoxList ID="c7" runat="server" Visible="false" DataSourceID="SqlDataSource7" DataTextField="I_Name" DataValueField="I_Name"></asp:CheckBoxList>
+                                <asp:CheckBoxList ID="c7" runat="server" Visible="false" DataSourceID="SqlDataSource7" DataTextField="I_Name" DataValueField="I_Id"></asp:CheckBoxList>
                             </div>
-                            <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'M%';"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [I_Id],[I_Name] FROM [ingredients] WHERE [I_Id] LIKE 'M%';"></asp:SqlDataSource>
                             <asp:Button ID="b1" runat="server" Text="submit" OnClick="b1_Click" CssClass="btn btn-1 btn-neutral" />
                             <asp:Label ID="l1" runat="server" />
                         </div>

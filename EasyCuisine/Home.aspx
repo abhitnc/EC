@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div>
-                            <asp:LinkButton ID="SignIn" runat="server" Text="Sign In" CssClass="btn btn-link text-info" PostBackUrl="~/register.aspx"></asp:LinkButton>
+                            <asp:LinkButton ID="SignIn" runat="server" Text="Sign Up" CssClass="btn btn-link text-info" PostBackUrl="~/register.aspx"></asp:LinkButton>
                             <asp:LinkButton ID="LogIn" runat="server" Text="Log In" CssClass="btn btn-link text-info" PostBackUrl="~/LogIn.aspx"></asp:LinkButton>
                         </div>
                     </div>
@@ -95,18 +95,11 @@
             <div class="container">
                 <div class="row row-grid align-items-center my-md">
                     <div class="col-lg-6">
-                        <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-                        <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
+                        <h3 class="text-primary font-weight-light mb-2">Thank You For Using <a href="Home.aspx">Easy Cuisine - A Recipe Generator</a></h3>
                     </div>
                 </div>
                 <hr>
                 <div class="row align-items-center justify-content-md-between">
-                    <div class="col-md-6">
-                        <div class="copyright">
-                            &copy; 2018           
-                        <a href="https://www.creative-tim.com" target="_blank">Easy Cuisine</a>.         
-                        </div>
-                    </div>
                     <div class="col-md-6">
                     </div>
                 </div>

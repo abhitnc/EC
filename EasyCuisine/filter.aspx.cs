@@ -99,49 +99,49 @@ public partial class filter : System.Web.UI.Page
         {
             if (c1.Items[j].Selected)
             {
-                i = i + "" + c1.Items[j].Text;
+                i = i + "" + c1.Items[j].Value;
             }
         }
         for (int j = 0; j < c2.Items.Count; j++)
         {
             if (c2.Items[j].Selected)
             {
-                i = i + "" + c2.Items[j].Text;
+                i = i + "" + c2.Items[j].Value;
             }
         }
         for (int j = 0; j < c3.Items.Count; j++)
         {
             if (c3.Items[j].Selected)
             {
-                i = i + "" + c3.Items[j].Text;
+                i = i + "" + c3.Items[j].Value;
             }
         }
         for (int j = 0; j < c4.Items.Count; j++)
         {
             if (c4.Items[j].Selected)
             {
-                i = i + "" + c4.Items[j].Text;
+                i = i + "" + c4.Items[j].Value;
             }
         }
         for (int j = 0; j < c5.Items.Count; j++)
         {
             if (c5.Items[j].Selected)
             {
-                i = i + "" + c5.Items[j].Text;
+                i = i + "" + c5.Items[j].Value;
             }
         }
         for (int j = 0; j < c6.Items.Count; j++)
         {
             if (c6.Items[j].Selected)
             {
-                i = i + "" + c6.Items[j].Text;
+                i = i + "" + c6.Items[j].Value;
             }
         }
         for (int j = 0; j < c7.Items.Count; j++)
         {
             if (c7.Items[j].Selected)
             {
-                i = i + "" + c7.Items[j].Text;
+                i = i + "" + c7.Items[j].Value;
             }
         }
         l1.Text = i;

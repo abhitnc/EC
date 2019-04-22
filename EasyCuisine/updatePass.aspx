@@ -49,7 +49,16 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
-                                        <asp:TextBox ID="pass1" runat="server" TextMode="Password" placeholder="Password" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="oldp" runat="server" TextMode="Password" placeholder="Old Password" CssClass="form-control"></asp:TextBox>
+                                    </div>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="oldp" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                        </div>
+                                        <asp:TextBox ID="pass1" runat="server" TextMode="Password" placeholder="New Password" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server" ControlToValidate="pass1" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
                                 </div>
@@ -64,7 +73,7 @@
                                 </div>
                                 <div class="text-center">
                                     <asp:Button ID="submit1" runat="server" Text="Update" CssClass="btn btn-primary mt-4" OnClick="submit1_Click" />
-                                    <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" OnClick="submit1_Click" />
+                                    <asp:Button ID="cancel1" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" OnClick="cancel1_Click" />
                                 </div>
                             </form>
                         </div>

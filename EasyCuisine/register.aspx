@@ -22,29 +22,62 @@
     <link type="text/css" href="../assets/css/docs.min.css" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <section class="section section-shaped section-lg">
-            <div class="shape shape-style-1 bg-gradient-default">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="container pt-lg-md">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5">
-                        <div class="card bg-secondary shadow border-0">
-                            <div class="card-header bg-white pb-5">
-                                <div class="text-center">
-                                    <h1 class="display-1 mb-0">REGISTER</h1>
-                                </div>
+    <form runat="server">
+    <header class="header-global">
+        <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+            <div class="container">
+                <a class="navbar-brand mr-lg-5" href="./index.html">
+                    <img src="a.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="Home.aspx">
+                                    <img src="blue.png">
+                                </a>
                             </div>
-                            <div class="card-body px-lg-5 py-lg-5">
-                                <form runat="server">
+                            <div class="col-6 collapse-close">
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <asp:LinkButton ID="SignIn" runat="server" Text="Sign In" CssClass="btn btn-link text-info" PostBackUrl="~/register.aspx"></asp:LinkButton>
+                        <asp:LinkButton ID="LogIn" runat="server" Text="Log In" CssClass="btn btn-link text-info" PostBackUrl="~/LogIn.aspx"></asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <main>
+            <section class="section section-shaped section-lg">
+                <div class="shape shape-style-1 bg-gradient-default">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="container pt-lg-md">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card bg-secondary shadow border-0">
+                                <div class="card-header bg-white pb-5">
+                                    <div class="text-center">
+                                        <h1 class="display-1 mb-0">REGISTER</h1>
+                                    </div>
+                                </div>
+                                <div class="card-body px-lg-5 py-lg-5">
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
                                             <div class="input-group-prepend">
@@ -52,8 +85,8 @@
                                             </div>
                                             <asp:TextBox ID="name" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
-                                        </div>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
+                                    </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
                                             <div class="input-group-prepend">
@@ -61,7 +94,7 @@
                                             </div>
                                             <asp:TextBox ID="number" runat="server" TextMode="Phone" placeholder="Phone Number" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ForeColor="RosyBrown" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
@@ -81,7 +114,7 @@
                                             <asp:TextBox ID="pass" runat="server" TextMode="Password" placeholder="Password" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Display="Dynamic" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator Display="Dynamic"  runat="server" ID="RegularExpressionValidator2" ValidationExpression="^(?=.*\d+)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%]{6,10}$" ErrorMessage="Bad password" ControlToValidate="pass"></asp:RegularExpressionValidator>
+                                        <asp:RegularExpressionValidator Display="Dynamic" runat="server" ID="RegularExpressionValidator2" ValidationExpression="^(?=.*\d+)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%]{6,10}$" ErrorMessage="Bad password" ControlToValidate="pass"></asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative">
@@ -94,72 +127,23 @@
                                     </div>
                                     <div class="text-center">
                                         <asp:Button ID="reg" runat="server" Text="Create" CssClass="btn btn-primary mt-4" OnClick="reg_Click1" />
-                                        <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" OnClick="reg_Click1" />
+                                        <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" PostBackUrl="~/Home.aspx" />
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-6 text-center">
-                                <a href="#" class="text-light">
-                                    <small>Already have an Account?</small>
-                                </a>
+                            <div class="row mt-3">
+                                <div class="col-6 text-center">
+                                    <a href="login.aspx" class="text-light">
+                                        <small>Already have an Account?</small>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="row row-grid align-items-center mb-5">
-                <div class="col-lg-6">
-                    <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-                    <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
-                </div>
-                <div class="col-lg-6 text-lg-center btn-wrapper">
-                    <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip" data-original-title="Follow us">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip" data-original-title="Like us">
-                        <i class="fa fa-facebook-square"></i>
-                    </a>
-                    <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" data-toggle="tooltip" data-original-title="Follow us">
-                        <i class="fa fa-dribbble"></i>
-                    </a>
-                    <a target="_blank" href="https://github.com/creativetimofficial" class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip" data-original-title="Star on Github">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </div>
-            </div>
-            <hr>
-            <div class="row align-items-center justify-content-md-between">
-                <div class="col-md-6">
-                    <div class="copyright">
-                        &copy; 2018
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <ul class="nav nav-footer justify-content-end">
-                        <li class="nav-item">
-                            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+            </section>
+        </main>
+    </form>
     <!-- Core -->
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/popper/popper.min.js"></script>

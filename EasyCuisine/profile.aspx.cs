@@ -11,4 +11,14 @@ public partial class profile : System.Web.UI.Page
     {
 
     }
+
+    protected void Unnamed_Click1(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void Unnamed_Click2(object sender, EventArgs e)
+    {
+
+    }
 }
