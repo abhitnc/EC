@@ -22,6 +22,24 @@ public partial class searchRecipe : System.Web.UI.Page
             Response.Redirect("login.aspx");
         }
     }
+
+
+    protected void profile_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("profile.aspx");
+    }
+
+    protected void logout_Click(object sender, EventArgs e)
+    {
+        Session["id"] = null;
+        Response.Redirect("login.aspx");
+    }
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("updatePass.aspx");
+    }
+
     private void SearchCustomers()
     {
         string constr = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
