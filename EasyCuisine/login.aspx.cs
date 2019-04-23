@@ -24,8 +24,6 @@ public partial class login : System.Web.UI.Page
 
     {
 
-        string strpassword = Encryptdata(pass.Text);
-
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
 
         con.Open();

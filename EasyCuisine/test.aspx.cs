@@ -24,20 +24,20 @@ public partial class test : System.Web.UI.Page
     }
     protected void Button_Click(object sender, EventArgs e)
     {
-        if (F102.Checked && F103.Checked && D101.Checked && M108.Checked)
+        if (G102.Checked && L103.Checked && L104.Checked && M104.Checked)
         {
             Panel1.Visible = true;
             // ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('CheckBox checked.');", true);
         }
-        else if (D101.Checked)
+        else if (G102.Checked && L103.Checked && L104.Checked && M104.Checked)
         {
             Panel1.Visible = true;
         }
-        else if (D101.Checked)
+        else if (G105.Checked && M103.Checked && M106.Checked && G101.Checked && G101.Checked && G101.Checked)
         {
             Panel2.Visible = true;
         }
-        else if (D101.Checked)
+        else if (D101.Checked && G101.Checked && G101.Checked && G101.Checked && G101.Checked && G101.Checked && G101.Checked && G101.Checked && G101.Checked && G101.Checked)
         {
             Panel3.Visible = true;
         }
@@ -108,6 +108,10 @@ public partial class test : System.Web.UI.Page
     {
         Session["id"] = null;
         Response.Redirect("login.aspx");
+    }
+    protected void LinkButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("updatePass.aspx");
     }
 
 }

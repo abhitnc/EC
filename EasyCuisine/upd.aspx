@@ -56,7 +56,7 @@
 
     <br />
 
-     Enter Name to Update:-
+     Enter Number to Update:-
 
         <asp:TextBox ID="Sname" runat="server"></asp:TextBox>
 

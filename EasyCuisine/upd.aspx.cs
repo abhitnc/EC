@@ -73,7 +73,7 @@ public partial class upd : System.Web.UI.Page
 
                 {
 
-                    sql += " WHERE User_Name LIKE @Name + '%'";
+                    sql += " WHERE User_Num LIKE @Name + '%'";
 
                     cmd.Parameters.AddWithValue("@Name", searchfield.Text.Trim());
 

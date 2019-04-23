@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Argon Design System</title>
+    <title>Home || EC</title>
     <!-- Favicon -->
     <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -50,6 +50,7 @@
                         <div>
                             <asp:LinkButton ValidateRequestMode="Disabled" ID="logout" runat="server" Text="Logout" CssClass="btn btn-link text-info" OnClick="logout_Click"></asp:LinkButton>
                             <asp:LinkButton ID="profile" runat="server" Text="Profile" ForeColor="Wheat" CssClass="ni ni-circle-08" OnClick="profile_Click"></asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton1" runat="server" Text="Update Password" ForeColor="Wheat" CssClass="ni ni-circle-08" OnClick="LinkButton1_Click"></asp:LinkButton>
                         </div>
                     </div>
                 </div>

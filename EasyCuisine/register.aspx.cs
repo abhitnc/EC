@@ -16,20 +16,36 @@ public partial class register : System.Web.UI.Page
 
     }
 
-    protected void reg_Click1(object sender, EventArgs e)
-    {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-        con.Open();
-        SqlCommand cmd = con.CreateCommand();
-        cmd.CommandType = System.Data.CommandType.Text;
-        cmd.CommandText = "insert into SignUp(User_Name,User_Num,User_Email,User_Pass) values ('" + name.Text + "','" + number.Text + "','" + email.Text + "','" + pass.Text + "')";
-        cmd.ExecuteNonQuery();
-        con.Close();
-        Response.Redirect("login.aspx");
-    }
 
     protected void LogIn_Click(object sender, EventArgs e)
     {
-        Response.Redirect("logins.aspx");
+        Response.Redirect("login.aspx");
+    }
+    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+
+
+
+    protected void reg_Click1(object sender, EventArgs e)
+
+    {
+
+        string abc = "0";
+
+        con.Open();
+
+        SqlCommand cmd = new SqlCommand("insert into SignUp(User_Name,User_Num,User_Email,User_Pass) values ('" + name.Text + "','" + number.Text + "','" + email.Text + "','" + pass.Text + "')", con);
+
+        SqlCommand cmd1 = new SqlCommand("insert into logintable(email,password,password_change_status) values('" + email.Text + "','" + pass.Text + "','" + abc + "')", con);
+
+        cmd.ExecuteNonQuery();
+
+        cmd1.ExecuteNonQuery();
+
+        con.Close();
+
+        Response.Redirect("login.aspx");
+
+
+
     }
 }

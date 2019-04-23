@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Argon Design System - Free Design System for Bootstrap 4</title>
+    <title>Login || Easy Cuisine - A Recipe Generator</title>
     <!-- Favicon -->
     <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -82,7 +82,8 @@
                                             </div>
                                             <asp:TextBox ID="email" AutoCompleteType="Disabled" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ForeColor="Red" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Wrong email address" ControlToValidate="email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ForeColor="Red" Display="Dynamic" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <!--Password-->
                                     <div class="form-group">
@@ -92,10 +93,11 @@
                                             </div>
                                             <asp:TextBox ID="pass" runat="server" AutoCompleteType="Disabled" TextMode="Password" placeholder="Password" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="Red" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
+                                        <asp:RegularExpressionValidator Display="Dynamic" runat="server" ID="RegularExpressionValidator2" ValidationExpression="^(?=.*\d+)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%]{6,10}$" ErrorMessage="Bad password" ControlToValidate="pass"></asp:RegularExpressionValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ForeColor="Red" Display="Dynamic" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="text-center">
-                                        <asp:Button ID="Log" runat="server" Text="Log In" CssClass="btn btn-primary mt-4" OnClick="log_Click" />
+                                        <asp:Button ID="Log" runat="server" Text="Log In" CssClass="btn btn-primary mt-4" OnClick="submit_Click" />
                                         <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" PostBackUrl="~/First.aspx" />
                                     </div>
                             </div>

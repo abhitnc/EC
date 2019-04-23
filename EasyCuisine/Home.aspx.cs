@@ -18,12 +18,17 @@ public partial class Home : System.Web.UI.Page
 
     protected void profile_Click(object sender, EventArgs e)
     {
-        Response.Redirect("upd.aspx");
+        Response.Redirect("profile.aspx");
     }
 
     protected void logout_Click(object sender, EventArgs e)
     {
         Session["id"] = null;
         Response.Redirect("login.aspx");
+    }
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("updatePass.aspx");
     }
 }

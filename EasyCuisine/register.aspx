@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Design System for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Argon Design System - Free Design System for Bootstrap 4</title>
+    <title>Register || Easy Cuisine - A Recipe Generator</title>
     <!-- Favicon -->
     <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -81,6 +81,8 @@
                                             </div>
                                             <asp:TextBox ID="name" runat="server" AutoCompleteType="Disabled" placeholder="Name" CssClass="form-control"></asp:TextBox>
                                         </div>
+                                    <asp:RegularExpressionValidator ID="name1" ErrorMessage="Minimum 3 CHARACTER REQUIRED" ForeColor="Red" Display="Dynamic" ControlToValidate="name" runat="server" ValidationExpression="^[\s\S]{3,}$"></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" ErrorMessage="Only CHARACTER allowed" ForeColor="Red" Display="Dynamic" ControlToValidate="name" runat="server" ValidationExpression="[a-zA-Z]*$"></asp:RegularExpressionValidator>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
@@ -88,9 +90,10 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                                             </div>
-                                            <asp:TextBox ID="number" runat="server" TextMode="Phone" AutoCompleteType="Disabled" placeholder="Phone Number" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="number" runat="server" TextMode="Number" AutoCompleteType="Disabled" placeholder="Phone Number" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ErrorMessage="Only 10 digit allowed" ForeColor="Red" Display="Dynamic" ControlToValidate="number" runat="server" ValidationExpression="[0-9]{10}"></asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
@@ -119,6 +122,7 @@
                                             </div>
                                             <asp:TextBox ID="confirm" runat="server" TextMode="Password" placeholder="Confirm Password" CssClass="form-control"></asp:TextBox>
                                         </div>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="confirm" ErrorMessage="Confirm Password Required"></asp:RequiredFieldValidator>
                                         <asp:CompareValidator ID="CompareValidator1" runat="server" Display="Dynamic" ControlToCompare="pass" ControlToValidate="confirm" ForeColor="Red" ErrorMessage="Password Not Matching"></asp:CompareValidator>
                                     </div>
                                     <div class="text-center">

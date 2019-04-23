@@ -13,7 +13,7 @@
 
     <meta name="author" content="Creative Tim">
 
-    <title>Argon Design System - Free Design System for Bootstrap 4</title>
+    <title>Register || Easy Cuisine - A Recipe Generator</title>
 
     <!-- Favicon -->
 
@@ -36,7 +36,6 @@
     <!-- Docs CSS -->
 
     <link type="text/css" href="../assets/css/docs.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -75,7 +74,7 @@
 
                             <div class="card-header bg-white pb-5">
 
-                                
+
 
                                 <div class="text-center">
 
@@ -87,7 +86,7 @@
 
                             <div class="card-body px-lg-5 py-lg-5">
 
-                               
+
 
                                 <form runat="server">
 
@@ -96,12 +95,11 @@
                                         <div class="input-group input-group-alternative mb-3">
 
                                             <div class="input-group-prepend">
+                                            </div>
 
-                                         </div>
+                                            <asp:TextBox AutoCompleteType="Disabled" ID="TextBox1" placeholder="Recipe Name" TextMode="SingleLine" runat="server"></asp:TextBox>
 
-        <asp:TextBox AutoCompleteType="Disabled" ID="TextBox1" placeholder="Recipe Name" TextMode="SingleLine" runat="server"></asp:TextBox>
-
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="Textbox1" Display="Dynamic" ErrorMessage="Enter Recipe Name" ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="Textbox1" Display="Dynamic" ErrorMessage="Enter Recipe Name" ForeColor="Red"></asp:RequiredFieldValidator>
 
                                         </div>
 
@@ -112,14 +110,13 @@
                                         <div class="input-group input-group-alternative mb-3">
 
                                             <div class="input-group-prepend">
-
                                             </div>
 
-        <asp:TextBox TextMode="MultiLine" runat="server" placeholder="Ingredients" AutoCompleteType="Disabled" ID="Ingre"></asp:TextBox>
+                                            <asp:TextBox TextMode="MultiLine" runat="server" placeholder="Ingredients" AutoCompleteType="Disabled" ID="Ingre"></asp:TextBox>
 
                                         </div>
 
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" runat="server" ControlToValidate="Ingre" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" runat="server" ControlToValidate="Ingre" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
 
                                     </div>
 
@@ -128,28 +125,27 @@
                                         <div class="input-group input-group-alternative mb-3">
 
                                             <div class="input-group-prepend">
-
                                             </div>
 
-        <asp:DropDownList ID="DropDownList1" runat="server">
+                                            <asp:DropDownList ID="DropDownList1" runat="server">
 
-            <asp:ListItem Selected="True" >--Category--</asp:ListItem>
+                                                <asp:ListItem Selected="True">--Category--</asp:ListItem>
 
-            <asp:ListItem>Breakfast</asp:ListItem>
+                                                <asp:ListItem>Breakfast</asp:ListItem>
 
-            <asp:ListItem>Lunch</asp:ListItem>
+                                                <asp:ListItem>Lunch</asp:ListItem>
 
-            <asp:ListItem>Dinner</asp:ListItem>
+                                                <asp:ListItem>Dinner</asp:ListItem>
 
-            <asp:ListItem>Snacks</asp:ListItem>
+                                                <asp:ListItem>Snacks</asp:ListItem>
 
-            <asp:ListItem>Beverage</asp:ListItem>
+                                                <asp:ListItem>Beverage</asp:ListItem>
 
-        </asp:DropDownList>
+                                            </asp:DropDownList>
 
                                         </div>
 
-        <asp:RequiredFieldValidator Display="Dynamic" InitialValue="--Category--" ForeColor="Red" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Select the Category" ControlToValidate="DropDownList1"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator Display="Dynamic" InitialValue="--Category--" ForeColor="Red" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Select the Category" ControlToValidate="DropDownList1"></asp:RequiredFieldValidator>
 
                                     </div>
 
@@ -158,58 +154,54 @@
                                         <div class="input-group input-group-alternative">
 
                                             <div class="input-group-prepend">
-
                                             </div>
 
-        <asp:TextBox ID="TextBox8" runat="server" AutoCompleteType="Disabled" TextMode="Number" Columns="10" placeholder="Time to Cook in Min" Rows="5" min="0"></asp:TextBox>
+                                            <asp:TextBox ID="TextBox8" runat="server" AutoCompleteType="Disabled" TextMode="Number" Columns="10" placeholder="Time to Cook in Min" Rows="5" min="0"></asp:TextBox>
 
-        <asp:RequiredFieldValidator ID="TTKval" runat="server" ControlToValidate="TextBox8" ErrorMessage="Enter minutes" ForeColor="Red"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator ID="TTKval" runat="server" ControlToValidate="TextBox8" ErrorMessage="Enter minutes" ForeColor="Red"></asp:RequiredFieldValidator>
 
                                         </div>
 
                                     </div>
 
-                                                            <div class="form-group">
+                                    <div class="form-group">
 
                                         <div class="input-group input-group-alternative">
 
                                             <div class="input-group-prepend">
-
                                             </div>
 
                                             <asp:FileUpload ID="FileUpload1" runat="server" />
 
-        <asp:RequiredFieldValidator Display="Dynamic" ForeColor="Red" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Upload the image of product" ControlToValidate="FileUpload1"></asp:RequiredFieldValidator>
+                                            <asp:RequiredFieldValidator Display="Dynamic" ForeColor="Red" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Upload the image of product" ControlToValidate="FileUpload1"></asp:RequiredFieldValidator>
 
-        
 
-                                          </div>
 
-                                            </div>
-
-      </div>
-
-                                    <div class="text-muted font-italic">
+                                        </div>
 
                                     </div>
+                            </div>
 
-                                    <div class="text-center">
+                            <div class="text-muted font-italic">
+                            </div>
 
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Recipe" />
+                            <div class="text-center">
 
-                                    </div>
-
-                                    <asp:Label ID="Label1" runat="server"></asp:Label>
-
-                                </form>
+                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Recipe" />
 
                             </div>
+
+                            <asp:Label ID="Label1" runat="server"></asp:Label>
+
+                            </form>
 
                         </div>
 
                     </div>
 
                 </div>
+
+            </div>
 
             </div>
 

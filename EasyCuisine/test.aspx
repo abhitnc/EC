@@ -50,6 +50,7 @@
                         <div>
                             <asp:LinkButton ValidateRequestMode="Disabled" ID="logout" runat="server" Text="Logout" CssClass="btn btn-link text-info" OnClick="logout_Click"></asp:LinkButton>
                             <asp:LinkButton ID="profile" runat="server" Text="Profile" ForeColor="Wheat" CssClass="ni ni-circle-08" OnClick="profile_Click"></asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton1" runat="server" Text="Update Password" ForeColor="Wheat" CssClass="ni ni-circle-08" OnClick="LinkButton_Click"></asp:LinkButton>
                         </div>
                     </div>
                 </div>
@@ -60,18 +61,6 @@
                 <!-- Hero for FREE version -->
                 <section class="section section-lg section-hero section-shaped">
                     <!-- Background circles -->
-                    <div class="shape shape-style-1 shape-primary">
-                        <span class="span-150"></span>
-                        <span class="span-50"></span>
-                        <span class="span-50"></span>
-                        <span class="span-75"></span>
-                        <span class="span-100"></span>
-                        <span class="span-75"></span>
-                        <span class="span-50"></span>
-                        <span class="span-100"></span>
-                        <span class="span-50"></span>
-                        <span class="span-100"></span>
-                    </div>
                     <div class="container shape-container d-flex align-items-center py-lg">
                         <div class="col px-0">
                             <div id="contentDiv1">
