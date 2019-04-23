@@ -25,6 +25,11 @@ public partial class register : System.Web.UI.Page
         cmd.CommandText = "insert into SignUp(User_Name,User_Num,User_Email,User_Pass) values ('" + name.Text + "','" + number.Text + "','" + email.Text + "','" + pass.Text + "')";
         cmd.ExecuteNonQuery();
         con.Close();
-        Response.Redirect("MyPage.aspx");
+        Response.Redirect("login.aspx");
+    }
+
+    protected void LogIn_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("logins.aspx");
     }
 }

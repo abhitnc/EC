@@ -48,10 +48,6 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <asp:LinkButton ID="SignIn" runat="server" Text="Sign In" CssClass="btn btn-link text-info" PostBackUrl="~/register.aspx"></asp:LinkButton>
-                        <asp:LinkButton ID="LogIn" runat="server" Text="Log In" CssClass="btn btn-link text-info" PostBackUrl="~/LogIn.aspx"></asp:LinkButton>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -83,7 +79,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                             </div>
-                                            <asp:TextBox ID="name" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="name" runat="server" AutoCompleteType="Disabled" placeholder="Name" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="name" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
                                     </div>
@@ -92,18 +88,18 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                                             </div>
-                                            <asp:TextBox ID="number" runat="server" TextMode="Phone" placeholder="Phone Number" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="number" runat="server" TextMode="Phone" AutoCompleteType="Disabled" placeholder="Phone Number" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ForeColor="RosyBrown" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="number" ErrorMessage="Number Required"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group input-group-alternative mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                             </div>
-                                            <asp:TextBox ID="email" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="email" runat="server" TextMode="Email" placeholder="Email" AutoCompleteType="Disabled" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="Dynamic" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator1" runat="server" ErrorMessage="Wrong email address" ControlToValidate="email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
@@ -111,9 +107,9 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                             </div>
-                                            <asp:TextBox ID="pass" runat="server" TextMode="Password" placeholder="Password" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="pass" runat="server" TextMode="Password" placeholder="Password" AutoCompleteType="Disabled" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Display="Dynamic" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Display="Dynamic" ForeColor="Red" ControlToValidate="pass" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
                                         <asp:RegularExpressionValidator Display="Dynamic" runat="server" ID="RegularExpressionValidator2" ValidationExpression="^(?=.*\d+)(?=.*[a-zA-Z])[0-9a-zA-Z!@#$%]{6,10}$" ErrorMessage="Bad password" ControlToValidate="pass"></asp:RegularExpressionValidator>
                                     </div>
                                     <div class="form-group">
@@ -123,11 +119,11 @@
                                             </div>
                                             <asp:TextBox ID="confirm" runat="server" TextMode="Password" placeholder="Confirm Password" CssClass="form-control"></asp:TextBox>
                                         </div>
-                                        <asp:CompareValidator ID="CompareValidator1" runat="server" Display="Dynamic" ControlToCompare="pass" ControlToValidate="confirm" ErrorMessage="Password Not Matching"></asp:CompareValidator>
+                                        <asp:CompareValidator ID="CompareValidator1" runat="server" Display="Dynamic" ControlToCompare="pass" ControlToValidate="confirm" ForeColor="Red" ErrorMessage="Password Not Matching"></asp:CompareValidator>
                                     </div>
                                     <div class="text-center">
                                         <asp:Button ID="reg" runat="server" Text="Create" CssClass="btn btn-primary mt-4" OnClick="reg_Click1" />
-                                        <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" PostBackUrl="~/Home.aspx" />
+                                        <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-primary mt-4" PostBackUrl="~/First.aspx" />
                                     </div>
                                 </div>
                             </div>
@@ -143,6 +139,20 @@
                 </div>
             </section>
         </main>
+        <footer class="footer has-cards">
+            <div class="container">
+                <div class="row row-grid align-items-center my-md">
+                    <div class="col-lg-6">
+                        <h3 class="text-primary font-weight-light mb-2">Thank You For Using</h3><a href="Home.aspx">Easy Cuisine - A Recipe Generator</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row align-items-center justify-content-md-between">
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+        </footer>
     </form>
     <!-- Core -->
     <script src="../assets/vendor/jquery/jquery.min.js"></script>

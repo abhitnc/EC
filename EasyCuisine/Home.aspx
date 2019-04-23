@@ -48,8 +48,8 @@
                             </div>
                         </div>
                         <div>
-                            <asp:LinkButton ID="SignIn" runat="server" Text="Sign Up" CssClass="btn btn-link text-info" PostBackUrl="~/register.aspx"></asp:LinkButton>
-                            <asp:LinkButton ID="LogIn" runat="server" Text="Log In" CssClass="btn btn-link text-info" PostBackUrl="~/LogIn.aspx"></asp:LinkButton>
+                            <asp:LinkButton ValidateRequestMode="Disabled" ID="logout" runat="server" Text="Logout" CssClass="btn btn-link text-info" OnClick="logout_Click"></asp:LinkButton>
+                            <asp:LinkButton ID="profile" runat="server" Text="Profile" ForeColor="Wheat" CssClass="ni ni-circle-08" OnClick="profile_Click"></asp:LinkButton>
                         </div>
                     </div>
                 </div>
@@ -78,11 +78,22 @@
                                 <div class="col-lg-8 text-center">
                                     <img src="a.png" style="width: 200px;" class="img-fluid">
                                     <div class="lead text-white">
-                                        A Recipe Search Engine where you get the result of all the matching recipes according to the ingredients you have choosen and vise versa.
+                                        Search a Recipe by it's Name...
                                     </div>
                                     <div class="btn-wrapper mt-5">
-                                        <asp:Button ID="Button1" runat="server" CssClass="btn btn-lg btn-white btn-icon mb-3 mb-sm-0" Text="Search By Recipe Name"></asp:Button>
-                                        <asp:Button ID="Button2" runat="server" CssClass="btn btn-lg btn-white btn-icon mb-3 mb-sm-0" Text="Search By Recipe Ingredient"></asp:Button>
+                                        <asp:Button ID="Button1" runat="server" CssClass="btn btn-lg btn-white btn-icon mb-3 mb-sm-0" Text="Search By Recipe Name" PostBackUrl="~/searchRecipe.aspx"></asp:Button>
+                                    </div>
+                                    <div class="lead text-white">
+                                        Search a Recipe by It's Ingredients...
+                                    </div>
+                                    <div class="btn-wrapper mt-5">
+                                        <asp:Button ID="Button2" runat="server" CssClass="btn btn-lg btn-white btn-icon mb-3 mb-sm-0" Text="Search By Recipe Ingredient" PostBackUrl="~/filter.aspx"></asp:Button>
+                                    </div>
+                                    <div class="lead text-white">
+                                        Add Your own Recipe...
+                                    </div>
+                                    <div class="btn-wrapper mt-5">
+                                        <asp:Button ID="Button3" runat="server" CssClass="btn btn-lg btn-white btn-icon mb-3 mb-sm-0" Text="Add Your Own Recipe" PostBackUrl="~/addRecipe.aspx"></asp:Button>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +106,8 @@
             <div class="container">
                 <div class="row row-grid align-items-center my-md">
                     <div class="col-lg-6">
-                        <h3 class="text-primary font-weight-light mb-2">Thank You For Using <a href="Home.aspx">Easy Cuisine - A Recipe Generator</a></h3>
+                        <h3 class="text-primary font-weight-light mb-2">Thank You For Using</h3>
+                        <a href="Home.aspx">Easy Cuisine - A Recipe Generator</a>
                     </div>
                 </div>
                 <hr>

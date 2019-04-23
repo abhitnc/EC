@@ -49,7 +49,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                         </div>
-                                        <asp:TextBox ID="email" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="email" AutoCompleteType="Disabled" runat="server" TextMode="Email" placeholder="Email" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
                                 </div>

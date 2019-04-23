@@ -7,10 +7,6 @@ using System.Web.UI.WebControls;
 
 public partial class filter : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
         Response.Redirect("index.aspx");
@@ -145,5 +141,24 @@ public partial class filter : System.Web.UI.Page
             }
         }
         l1.Text = i;
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["id"] == null)
+        {
+            Response.Redirect("login.aspx");
+        }
+    }
+
+
+    protected void profile_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("upd.aspx");
+    }
+
+    protected void logout_Click(object sender, EventArgs e)
+    {
+        Session["id"] = null;
+        Response.Redirect("login.aspx");
     }
 }

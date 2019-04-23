@@ -54,8 +54,8 @@ public partial class forgetPass : System.Web.UI.Page
             smtp.Host = "smtp.gmail.com";
             smtp.EnableSsl = true;
             NetworkCredential NetworkCred = new NetworkCredential();
-            NetworkCred.UserName = "abhitnc@gmail.com";
-            NetworkCred.Password = "MAURYA1a@";
+            NetworkCred.UserName = "easycuisine0@gmail.com";
+            NetworkCred.Password = "easy@cuisine";
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = NetworkCred;
             smtp.Port = 587;

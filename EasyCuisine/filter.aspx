@@ -48,8 +48,8 @@
                             </div>
                         </div>
                         <div>
-                            <asp:LinkButton ID="SignIn" runat="server" Text="Sign In" CssClass="btn btn-link text-info" PostBackUrl="~/register.aspx"></asp:LinkButton>
-                            <asp:LinkButton ID="LogIn" runat="server" Text="Log In" CssClass="btn btn-link text-info" PostBackUrl="~/LogIn.aspx"></asp:LinkButton>
+                            <asp:LinkButton ValidateRequestMode="Disabled" ID="logout" runat="server" Text="Logout" CssClass="btn btn-link text-info" OnClick="logout_Click"></asp:LinkButton>
+                            <asp:LinkButton ID="profile" runat="server" Text="Profile" ForeColor="Wheat" CssClass="ni ni-circle-08" OnClick="profile_Click"></asp:LinkButton>
                         </div>
                     </div>
                 </div>

@@ -28,6 +28,13 @@ using System.Data.SqlClient;
 
 public partial class updatePass : System.Web.UI.Page
 {
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["id"] == null)
+        {
+            Response.Redirect("login.aspx");
+        }
+    }
 
     protected void submit1_Click(object sender, EventArgs e)
     {
